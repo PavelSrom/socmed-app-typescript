@@ -1,4 +1,4 @@
-import { IUser } from '../../../../server/src/models/User'
+import { IUser } from '../../../../src/models/User'
 
 export const AUTH_SUCCESS = 'AUTH_SUCCESS'
 export const AUTH_FAIL = 'AUTH_FAIL'

@@ -10,7 +10,7 @@ import {
   TextField,
   IconButton,
 } from '@material-ui/core'
-import { IPost } from '../../../server/src/models/Post'
+import { IPost } from '../../../src/models/Post'
 import ThumbUp from '@material-ui/icons/ThumbUp'
 import ChatBubble from '@material-ui/icons/ChatBubble'
 import Send from '@material-ui/icons/Send'

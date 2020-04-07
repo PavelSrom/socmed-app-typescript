@@ -1,4 +1,5 @@
 {
+  "exclude": ["client/*"],
   "compilerOptions": {
     /* Basic Options */
     // "incremental": true,                   /* Enable incremental compilation */

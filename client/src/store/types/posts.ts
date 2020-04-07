@@ -1,4 +1,4 @@
-import { IPost } from '../../../../server/src/models/Post'
+import { IPost } from '../../../../src/models/Post'
 
 export const GET_POSTS = 'GET_POSTS'
 export const CREATE_NEW_POST = 'CREATE_NEW_POST'

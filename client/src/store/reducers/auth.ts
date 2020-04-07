@@ -1,5 +1,5 @@
 import { AuthActions } from '../types/auth'
-import { IUser } from '../../../../server/src/models/User'
+import { IUser } from '../../../../src/models/User'
 
 interface RootState {
   isAuthenticated: boolean | null

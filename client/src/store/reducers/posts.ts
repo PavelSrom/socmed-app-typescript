@@ -1,5 +1,5 @@
 import { PostActions } from '../types/posts'
-import { IPost } from '../../../../server/src/models/Post'
+import { IPost } from '../../../../src/models/Post'
 
 interface RootState {
   posts: IPost[]
