@@ -33,8 +33,7 @@ mongoose_1.default
     console.log('Server not running - database error');
 });
 if (process.env.NODE_ENV === 'production') {
-    app.get('/', (req, res) => {
+    app.get('*', (req, res) => {
         res.sendfile(path_1.default.resolve(__dirname, '..', 'client', 'build', 'index.html'));
-        res.render('index');
     });
 }
