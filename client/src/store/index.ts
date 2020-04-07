@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, combineReducers, Store } from 'redux'
 import thunk, { ThunkMiddleware, /* ThunkAction, */ ThunkDispatch } from 'redux-thunk'
-import { composeWithDevTools } from 'redux-devtools-extension'
+// import { composeWithDevTools } from 'redux-devtools-extension'
 
 import auth from './reducers/auth'
 import posts from './reducers/posts'
@@ -25,5 +25,5 @@ export type Dispatch = ThunkDispatch<{}, {}, AppActions>
 
 export const store: Store = createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(thunk as ThunkMiddleware<AppState, AppActions>))
+  applyMiddleware(thunk as ThunkMiddleware<AppState, AppActions>)
 )
