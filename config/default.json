@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://pavelsrom:9806075939@socmed-typescript-9wp6s.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "thisisthebestsecretevermadeonthisplanethahaaaaa"
+}
