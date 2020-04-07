@@ -8,12 +8,14 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const config_1 = __importDefault(require("config"));
 const cors_1 = __importDefault(require("cors"));
 const path_1 = __importDefault(require("path"));
+const auth_1 = __importDefault(require("./routes/auth"));
+const posts_1 = __importDefault(require("./routes/posts"));
 const app = express_1.default();
 app.use(cors_1.default());
 app.use('/images', express_1.default.static(path_1.default.join(__dirname + '/../src/images')));
 app.use(express_1.default.json());
-// app.use('/api/auth', authRoutes)
-// app.use('/api/posts', postRoutes)
+app.use('/api/auth', auth_1.default);
+app.use('/api/posts', posts_1.default);
 app.use(express_1.default.static(__dirname + '/../client/build'));
 // app.use(express.static(__dirname))
 mongoose_1.default
