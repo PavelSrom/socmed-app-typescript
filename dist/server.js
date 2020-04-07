@@ -31,8 +31,8 @@ mongoose_1.default
     console.log('Server not running - database error');
 });
 if (process.env.NODE_ENV === 'production') {
-    app.use(express_1.default.static('../../client/build'));
+    app.use(express_1.default.static('../client/build'));
     app.get('*', (req, res) => {
-        res.sendfile(path_1.default.resolve(__dirname, '..', '..', 'client', 'build', 'index.html'));
+        res.sendfile(path_1.default.resolve(__dirname, '..', 'client', 'build', 'index.html'));
     });
 }
