@@ -14,7 +14,6 @@ app.use(express.json())
 app.use('/api/auth', authRoutes)
 app.use('/api/posts', postRoutes)
 app.use(express.static(__dirname + '/../client/build'))
-// app.use(express.static(__dirname))
 
 mongoose
   .connect(config.get('mongoURI'), {
