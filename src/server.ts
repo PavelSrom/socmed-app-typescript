@@ -11,8 +11,10 @@ const app = express()
 app.use(cors())
 app.use('/images', express.static(path.join(__dirname + '/../src/images')))
 app.use(express.json())
-app.use('/api/auth', authRoutes)
-app.use('/api/posts', postRoutes)
+// app.use('/api/auth', authRoutes)
+// app.use('/api/posts', postRoutes)
+app.use(express.static(__dirname + '/../client/build'))
+// app.use(express.static(__dirname))
 
 mongoose
   .connect(config.get('mongoURI'), {
@@ -31,9 +33,8 @@ mongoose
   })
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../client/build'))
-
-  app.get('*', (req, res) => {
+  app.get('/', (req, res) => {
     res.sendfile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'))
+    res.render('index')
   })
 }
